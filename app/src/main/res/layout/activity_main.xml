@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:tint="@color/colorPrimary"
+            android:id="@+id/cameraButton"
+            android:src="@drawable/ic_photo_black_48dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/takePhotoButton"
+            android:tint="@color/colorPrimary"
+
+            android:src="@drawable/ic_photo_camera_black_48dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:tint="@color/colorPrimary"
+                android:layout_height="wrap_content"
+                android:id="@+id/message_textEdit"
+                android:layout_toStartOf="@id/send_button"
+                android:hint="Say something nice"/>
+
+            <Button
+                android:id="@+id/send_button"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:backgroundTint="#ffffff"
+                android:text="Send"
+                android:layout_alignParentEnd="true"
+                tools:ignore="UnusedAttribute" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
